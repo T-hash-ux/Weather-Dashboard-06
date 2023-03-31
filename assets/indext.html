@@ -7,10 +7,37 @@
     <title>Weather Dashboard App</title>
 </head>
 
-<section>
-    <header class="header">Weather Dashboard</header>
-</section>
 <body>
+    <section>
+        <h1 class="header">Weather Dashboard</h1>
+    </section>
+
+    <section class="main">
+        <div class="sideBox">
+            <h1>Search for a City</h1>
+            <div class="search-box">
+                <input id="search-city" type="text" placeholder="Charlotte, NC" />
+                <button class="searchBtn" id="searchButton">Search</button>
+                <hr class="horizLine" />
+                <div id="previous-search"></div> 
+            </div>
+        </div>
+    </section>
+
+    <div class="mainBox">
+
+        <p>display date</p>
+        <p>display temp</p>
+        <p>display wind</p>
+        <p>display humidity</p>
+        
+    <div class="forecast"></div>
     
+    <div class="5-day">
+
+
+    </div>
+    </div>
+  <script src="./script.js"></script>  
 </body>
 </html>
