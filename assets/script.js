@@ -14,6 +14,8 @@ var getDataBack = document.getElementById("")
 
 
 
+
+
 // Created a function for the search history element in order to save the searches in the local storage.
 function saveHistory(city) {
   console.log(city)
@@ -32,25 +34,36 @@ function renderHistory() {
   for (let i =0; i < searchHistory.length; i++) {
   var row = document.createElement("div")
   var button = document.createElement("button")
+  button.setAttribute("class", "historyBtn")
   row.setAttribute("class", "col-2")
   button.textContent = searchHistory[i]
-  historyEl.appendChild(row)
-  row.appendChild(button)
+  historyEl.appendChild(button)
+  // row.appendChild(button)
 
   }
 }
+$(".hisotryBtn").on("click",  function(){
+  console.log("ok")
+})
 
 // This function is created to render the weather deatils the will be displayed on the page.
 
 function renderWeather(data) {
+  console.log(data)
+  
   cityName.textContent = data.city.name
   tempEl.textContent = "temp: " + data.list[0].main.temp + " degrees"
   windEl.textContent = "wind: " + data.list[0].wind.speed + " MPH"
   humidEl.textContent = "humidity: " + data.list[0].main.humidity + "%"
 
-
+// This function was created to display the 5 day weather cards as well as the icons.
 }
 function renderfiveDay(data) {
+  for(let i =0; i< data.list.length; i++){
+    var iconcode = data.list[i].weather[0].icon;
+  var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+  }
+  
   fiveDay.textContent = ""
   for (let i = 0; i < data.list.length; i = i + 8) {
     console.log(data.list[i])
@@ -61,6 +74,7 @@ function renderfiveDay(data) {
     </div>
 
     <div class="card-body">
+        <img src=${iconurl}>
         <p>Temp: ${data.list[i].main.temp}°</p>
         <p>wind: ${data.list[i].wind.speed} MPH</p>
         <p>humid: ${data.list[i].main.humidity} %</p>
@@ -115,6 +129,10 @@ clearEl.addEventListener("click", function() {
 
 
 renderHistory();
+
+function myFunction() { document.getElementById("myForm").reset(); }
+
+myFunction();
 
 
 
