@@ -1,3 +1,4 @@
+// Set up my variables for each element.
 var form = document.querySelector("form");
 var forecastEl = document.querySelector(".forecast");
 var tempEl = document.querySelector(".temp");
