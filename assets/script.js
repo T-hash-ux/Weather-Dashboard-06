@@ -40,9 +40,7 @@ function renderHistory() {
   }
 }
 
-
-
-
+// This function is created to render the weather deatils the will be displayed on the page.
 
 function renderWeather(data) {
   cityName.textContent = data.city.name
