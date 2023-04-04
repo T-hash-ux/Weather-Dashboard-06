@@ -61,7 +61,7 @@ function renderWeather(data) {
 function renderfiveDay(data) {
   for(let i =0; i< data.list.length; i++){
     var iconcode = data.list[i].weather[0].icon;
-  var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+  var iconurl = "https://openweathermap.org/img/w/" + iconcode + ".png";
   }
   
   fiveDay.textContent = ""
@@ -92,7 +92,7 @@ form.addEventListener("submit", function (event) {
   
 // Fetching the apis for the geographic data and the forecast of the locations.
 
-  fetch("http://api.openweathermap.org/geo/1.0/direct?q=" + form.city.value + "&appid=0578539c9ba7ff6fc8e3f6f54cac232c")
+  fetch("https://api.openweathermap.org/geo/1.0/direct?q=" + form.city.value + "&appid=0578539c9ba7ff6fc8e3f6f54cac232c")
     .then(function (response) {
       return response.json();
     })
@@ -101,7 +101,7 @@ form.addEventListener("submit", function (event) {
       let lat = data[0].lat;
       let lon = data[0].lon;
       console.log(lat + ""+lon)
-      fetch("http://api.openweathermap.org/data/2.5/forecast?lat="+lat+"&lon="+lon+"&appid=0578539c9ba7ff6fc8e3f6f54cac232c&units=imperial")
+      fetch("https://api.openweathermap.org/data/2.5/forecast?lat="+lat+"&lon="+lon+"&appid=0578539c9ba7ff6fc8e3f6f54cac232c&units=imperial")
         .then(function(response){
           return response.json();
         })
@@ -119,14 +119,6 @@ form.addEventListener("submit", function (event) {
 });
 
 
-
-
-clearEl.addEventListener("click", function() {
-  localStorage.removeItem("searchHistory");
-  containerEl.innerHTML = "";
-  searchHistory = [];
-
-});
 
 
 renderHistory();
