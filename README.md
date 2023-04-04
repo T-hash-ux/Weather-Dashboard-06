@@ -21,4 +21,3 @@ The technologies used for this project was :
 MIT license
 
 
-Deployed site : https://t-hash-ux.github.io/Weather-Dashboard-06
