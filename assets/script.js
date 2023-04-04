@@ -131,9 +131,6 @@ clearEl.addEventListener("click", function() {
 
 renderHistory();
 
-function myFunction() { document.getElementById("myForm").reset(); }
-
-myFunction();
 
 
 
