@@ -14,7 +14,7 @@ var getDataBack = document.getElementById("")
 
 
 
-
+// Created a function for the search history element in order to save the searches in the local storage.
 function saveHistory(city) {
   console.log(city)
   
