@@ -25,7 +25,7 @@ function saveHistory(city) {
 
 }
 
-
+// Created a function to render the history that will be saved.
 function renderHistory() {
   historyEl.textContent = ""
 
