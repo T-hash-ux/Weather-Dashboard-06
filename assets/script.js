@@ -90,6 +90,7 @@ fiveDay.insertAdjacentHTML("beforeend",html)
 form.addEventListener("submit", function (event) {
   event.preventDefault();
   
+// Fetching the apis for the geographic data and the forecast of the locations.
 
   fetch("http://api.openweathermap.org/geo/1.0/direct?q=" + form.city.value + "&appid=0578539c9ba7ff6fc8e3f6f54cac232c")
     .then(function (response) {
