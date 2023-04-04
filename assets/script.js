@@ -8,8 +8,8 @@ var cityName = document.querySelector(".city-name");
 var fiveDay = document.querySelector(".five-day");
 var historyEl = document.querySelector(".history-search");
 var searchHistory = JSON.parse(localStorage.getItem("searchHistory")) || []
-var clearEl = document.getElementById(".clear");
-var containerEl = document.getElementById(".container");
+var clearEl = document.querySelector(".clear");
+var containerEl = document.querySelector(".container");
 var getDataBack = document.getElementById("")
 
 
