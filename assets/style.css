@@ -1,0 +1,20 @@
+h1 {
+    background-color: blue;
+    color: azure;
+    text-align: center;
+}
+ .card {
+    display: flex;
+    align-items: center;
+    display: inline-block;
+ }
+
+.forecast {
+    justify-content: center;
+
+ }
+ .button {
+    width: ;
+ }
+
+
