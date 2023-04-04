@@ -17,4 +17,8 @@ The technologies used for this project was :
 ## Contributors
 - Sarah Miller
 
+## License
+MIT license
+
+
 Deployed site : https://t-hash-ux.github.io/Weather-Dashboard-06/
